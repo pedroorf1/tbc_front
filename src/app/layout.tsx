@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+
+import { Providers } from "../theme/chakraProvider";
+import { fonts } from "../theme/fonts";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,8 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-br">
-      <body>{children}</body>
+    <html lang="pt-br" className={fonts.roboto.variable}>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

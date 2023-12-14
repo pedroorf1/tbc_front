@@ -1,3 +1,7 @@
+import {Header} from "./components/header"
+
 export default function Home() {
-  return <main>Trabalho casual</main>;
+  return <main>
+    <Header />
+  </main>;
 }
